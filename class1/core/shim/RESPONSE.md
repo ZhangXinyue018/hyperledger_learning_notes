@@ -1,0 +1,2 @@
+# Response
+Response定义了chaincode中的通用response

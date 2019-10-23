@@ -56,6 +56,24 @@ type ChaincodeStubInterface interface {
 }
 ```
 ### HistoryQueryIteratorInterface
-用以history结果的循环
+用以history结果的循环，主要有`HasNext`，`Close`和`Next`
+```golang
+type HistoryQueryIteratorInterface interface {
+	// Inherit HasNext() and Close()
+	CommonIteratorInterface
+
+	// Next returns the next key and value in the history query iterator.
+	Next() (*queryresult.KeyModification, error)
+}
+```
 ### StateQueryIteratorInterface
-用以ChaincodeStubInterface的某些（例如GetStateByRange）结果的循环
+用以ChaincodeStubInterface的某些（例如GetStateByRange）结果的循环，主要有`HasNext`，`Close`和`Next`
+```golang
+type StateQueryIteratorInterface interface {
+	// Inherit HasNext() and Close()
+	CommonIteratorInterface
+
+	// Next returns the next key and value in the range and execute query iterator.
+	Next() (*queryresult.KV, error)
+}
+```

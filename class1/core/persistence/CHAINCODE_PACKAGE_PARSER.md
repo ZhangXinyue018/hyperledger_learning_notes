@@ -1,0 +1,2 @@
+# chaincode package parser
+这里主要是ChaincodePackageParser实现了lifecycle的PackageParser

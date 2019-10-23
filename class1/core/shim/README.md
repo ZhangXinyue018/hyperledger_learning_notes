@@ -1,0 +1,2 @@
+# general
+总的来说，shim包中的文件都是通常被外部引用的，比如chaincode的接口，比如stub接口定义的ledger操作的方法等
